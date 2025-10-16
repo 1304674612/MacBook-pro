@@ -7,13 +7,13 @@
    - 功能: IntelliSense, 调试, 代码浏览
    - 用途: C/C++ 开发基础套件
 
-2. **clangd** ⭐ NEW (llvm-vs-code-extensions.vscode-clangd)
+2. **clangd** ⭐ (llvm-vs-code-extensions.vscode-clangd)
    - 功能: 基于 LLVM 的语言服务器
    - 优势: 比 cpptools 更快的代码补全和更准确的错误检测
    - 使用: 安装后自动工作,支持 C++20/23 新特性
    - ⚠️ 注意: 可能与 cpptools 冲突,建议在设置中禁用 cpptools 的 IntelliSense
 
-3. **Better C++ Syntax** ⭐ NEW (jeff-hykin.better-cpp-syntax)
+3. **Better C++ Syntax** ⭐ (jeff-hykin.better-cpp-syntax)
    - 功能: 增强的 C++ 语法高亮
    - 优势: 更精确的语法着色,支持现代 C++ 特性
    - 用途: 提升代码可读性
@@ -27,7 +27,7 @@
    - 包含: Language Support, Debugger, Maven, Test Runner
    - 功能: Java 开发全家桶
 
-2. **Spring Boot Tools** ⭐ NEW (vmware.vscode-spring-boot)
+2. **Spring Boot Tools** ⭐ (vmware.vscode-spring-boot)
    - 功能: Spring Boot 项目智能提示
    - 支持: application.properties, application.yml
    - 用途: Spring/Spring Boot 开发必备
@@ -35,13 +35,47 @@
 ### 🐍 Python 开发
 1. **Python** (ms-python.python)
    - 功能: Python 语言支持、调试、测试
+   - 版本: Python 3.14.0
 
 2. **Pylance** (ms-python.vscode-pylance)
    - 功能: 高性能 Python 语言服务器
    - 优势: 类型检查、智能补全、快速导航
 
+### 🎨 主题和图标
+1. **Material Icon Theme** ⭐ NEW (pkief.material-icon-theme)
+   - 功能: 文件和文件夹图标美化
+   - 特点: 支持 500+ 文件类型,自定义颜色
+   - 安装量: 3100万+
+
+2. **Dracula Theme** ⭐ NEW (dracula-theme.theme-dracula)
+   - 功能: 护眼深色主题
+   - 特点: 高对比度,支持所有编程语言
+   - 安装量: 950万+
+
+### 📝 Markdown 增强
+1. **Markdown Preview Enhanced** ⭐ NEW (shd101wyy.markdown-preview-enhanced)
+   - 功能: 超强 Markdown 预览
+   - 特性: 数学公式、Mermaid 流程图、导出 PDF/HTML
+   - 安装量: 784万+
+
+### ✅ 生产力工具
+1. **Todo Tree** ⭐ NEW (gruntfuggly.todo-tree)
+   - 功能: 树状视图显示所有 TODO/FIXME
+   - 特点: 自动扫描工作区,支持自定义标签
+   - 安装量: 654万+
+
+2. **Bookmarks** ⭐ NEW (alefragnani.bookmarks)
+   - 功能: 代码行书签和快速跳转
+   - 快捷键: Cmd+Opt+K 添加, Cmd+Opt+J/L 跳转
+   - 安装量: 460万+
+
+3. **Prettier** ⭐ NEW (esbenp.prettier-vscode)
+   - 功能: 代码自动格式化
+   - 支持: JS/TS/CSS/HTML/JSON/Markdown 等
+   - 安装量: 6189万+ (最流行的格式化工具)
+
 ### 🚀 通用工具
-1. **Code Runner** ⭐ NEW (formulahendry.code-runner)
+1. **Code Runner** ⭐ (formulahendry.code-runner)
    - 功能: 一键运行代码片段
    - 支持: C, C++, Java, Python, JavaScript 等 40+ 语言
    - 快捷键: `Ctrl+Alt+N` (macOS: `⌃⌥N`)
@@ -118,7 +152,85 @@
 3. **配置 Code Runner 输出**: 可以在设置中自定义运行命令
 4. **定期更新扩展**: 获取最新功能和性能改进
 
-## 🆘 故障排除
+## � 主题和外观
+
+### Material Icon Theme ⭐ NEW
+1. **启用图标主题**: `Cmd+Shift+P` → "File Icon Theme" → 选择 "Material Icon Theme"
+2. **自定义配置**: 支持多种图标风格和颜色
+3. **文件夹图标**: 特定文件夹(如 src, test, docs)有独特图标
+
+### Dracula Theme ⭐ NEW
+1. **切换主题**: `Cmd+K Cmd+T` 或 `Cmd+Shift+P` → "Color Theme" → "Dracula"
+2. **特点**: 护眼深色,高对比度,支持多种语言语法高亮
+3. **官方主题**: 全球 1000+ 编辑器和工具统一主题
+
+## 📝 Markdown 增强
+
+### Markdown Preview Enhanced ⭐ NEW
+1. **预览**: 右键 Markdown 文件 → "Markdown Preview Enhanced: Open Preview"
+2. **快捷键**: `Cmd+K V` (侧边预览) 或 `Cmd+Shift+V` (标签预览)
+3. **导出 PDF**: 预览窗口右键 → "Chrome (Puppeteer) → PDF"
+4. **特性**: 支持数学公式 (KaTeX)、Mermaid 流程图、PlantUML、代码块运行
+
+**示例 - 在 Markdown 中添加流程图:**
+````markdown
+```mermaid
+graph TD
+    A[开始] --> B{条件判断}
+    B -->|是| C[执行操作]
+    B -->|否| D[结束]
+    C --> D
+```
+````
+
+## ✅ TODO 管理
+
+### Todo Tree ⭐ NEW
+1. **查看 TODO**: 侧边栏自动显示 "Todo Tree" 面板
+2. **支持标签**: TODO, FIXME, HACK, XXX, BUG, NOTE 等
+3. **自定义高亮**: 在设置中配置不同标签的颜色和图标
+4. **快速跳转**: 点击 TODO 项直接跳转到代码位置
+
+**在代码中使用:**
+```java
+// TODO: 实现用户登录功能
+// FIXME: 修复空指针异常
+// HACK: 临时解决方案,需要重构
+```
+
+## 🔖 书签管理
+
+### Bookmarks ⭐ NEW
+1. **添加书签**: `Cmd+Opt+K` (Toggle Bookmark)
+2. **跳转书签**: 
+   - `Cmd+Opt+J` (跳转到下一个书签)
+   - `Cmd+Opt+L` (跳转到上一个书签)
+3. **查看所有书签**: 侧边栏 "Bookmarks" 面板
+4. **带标签书签**: `Cmd+Shift+P` → "Bookmarks: Toggle Labeled"
+
+## 💅 代码格式化
+
+### Prettier ⭐ NEW
+1. **格式化快捷键**: `Shift+Opt+F` 或右键 → "Format Document"
+2. **保存时自动格式化**: 
+   ```json
+   {
+     "editor.formatOnSave": true,
+     "editor.defaultFormatter": "esbenp.prettier-vscode"
+   }
+   ```
+3. **支持语言**: JavaScript, TypeScript, CSS, HTML, JSON, Markdown, YAML
+4. **配置文件**: 创建 `.prettierrc` 自定义规则
+   ```json
+   {
+     "semi": true,
+     "singleQuote": true,
+     "tabWidth": 2,
+     "printWidth": 100
+   }
+   ```
+
+## �🆘 故障排除
 
 ### clangd 无法工作
 1. 确保已安装 Clang: `clang --version`
@@ -131,3 +243,8 @@
 ### Spring Boot 提示不工作
 1. 确保项目有 `pom.xml` 或 `build.gradle`
 2. 重新加载 Java 项目: `Cmd+Shift+P` → "Java: Clean Java Language Server Workspace"
+
+### Prettier 不格式化
+1. 检查是否设置了默认格式化器
+2. 确保文件类型在 Prettier 支持列表中
+3. 查看输出面板 "Prettier" 频道的错误信息
