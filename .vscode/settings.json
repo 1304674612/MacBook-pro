@@ -1,7 +1,9 @@
 {
-  // 指定 Python 默认解释器（创建或重建虚拟环境后 VSCode 会自动侦测）
+  // Python 3.14.0 虚拟环境解释器
   "python.defaultInterpreterPath": "${workspaceFolder}/python_project/.venv/bin/python",
-  // 关闭每次进入时的 Python 选择弹窗
   "python.analysis.autoImportCompletions": true,
-  "python.analysis.typeCheckingMode": "basic"
+  "python.analysis.typeCheckingMode": "basic",
+  // Python 3.14 新特性支持
+  "python.languageServer": "Pylance",
+  "python.analysis.diagnosticMode": "workspace"
 }
