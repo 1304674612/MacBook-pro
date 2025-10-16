@@ -1,0 +1,30 @@
+## macOS
+.DS_Store
+
+## VSCode (keep config JSON but ignore temp)
+.vscode/*.log
+.vscode/*.cache
+
+## Python
+python_project/.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+## Java
+java_project/out/
+
+## C build output
+c_project/app
+
+## Common build / dist
+build/
+dist/
+target/
+*.o
+*.obj
+*.class
+
+## Logs
+*.log

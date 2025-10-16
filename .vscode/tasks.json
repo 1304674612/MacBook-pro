@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "C: Build",
+      "type": "shell",
+      "command": "make",
+      "options": { "cwd": "${workspaceFolder}/c_project" },
+      "group": "build",
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "C: Run",
+      "type": "shell",
+      "command": "make run",
+      "options": { "cwd": "${workspaceFolder}/c_project" },
+      "dependsOn": "C: Build"
+    },
+    {
+      "label": "Java: Compile",
+      "type": "shell",
+      "command": "javac -d out $(find src -name '*.java')",
+      "options": { "cwd": "${workspaceFolder}/java_project" },
+      "group": "build",
+      "problemMatcher": ["$javac"]
+    },
+    {
+      "label": "Java: Run",
+      "type": "shell",
+      "command": "java -cp out com.example.Main",
+      "options": { "cwd": "${workspaceFolder}/java_project" },
+      "dependsOn": "Java: Compile"
+    },
+    {
+      "label": "Python: Run",
+      "type": "shell",
+      "command": "python3 main.py",
+      "options": { "cwd": "${workspaceFolder}/python_project" },
+      "group": "test"
+    }
+  ]
+}
