@@ -22,7 +22,7 @@
       "command": "javac -d out $(find src -name '*.java')",
       "options": { "cwd": "${workspaceFolder}/java_project" },
       "group": "build",
-      "problemMatcher": ["$javac"]
+      "problemMatcher": []
     },
     {
       "label": "Java: Run",
@@ -32,11 +32,20 @@
       "dependsOn": "Java: Compile"
     },
     {
-      "label": "Python: Run",
+      "label": "Python: Run (venv)",
+      "type": "shell",
+      "command": "${workspaceFolder}/python_project/.venv/bin/python main.py",
+      "options": { "cwd": "${workspaceFolder}/python_project" },
+      "group": "test",
+      "detail": "使用项目内 .venv 的 Python 解释器"
+    },
+    {
+      "label": "Python: Run (system)",
       "type": "shell",
       "command": "python3 main.py",
       "options": { "cwd": "${workspaceFolder}/python_project" },
-      "group": "test"
+      "problemMatcher": [],
+      "detail": "备用: 使用系统 python3"
     }
   ]
 }
