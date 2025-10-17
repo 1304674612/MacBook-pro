@@ -1,0 +1,46 @@
+# cSpell 忽略文件 - 排除不需要拼写检查的路径
+# Build outputs
+target/
+dist/
+build/
+out/
+*.class
+
+# Dependencies
+node_modules/
+.venv/
+python_project/.venv/
+*/venv/
+__pycache__/
+
+# Environment & Config
+py312-base.yaml
+*.lock
+package-lock.json
+poetry.lock
+Pipfile.lock
+.DS_Store
+
+# Git
+.git/
+.github/
+
+# IDE
+.vscode/*.log
+.idea/
+
+# Binary & Media
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.woff
+*.woff2
+*.ttf
+*.eot
+
+# Logs
+*.log
+logs/

@@ -1,0 +1,33 @@
+# 依赖目录
+node_modules
+.venv
+venv
+__pycache__
+
+# 构建输出
+build
+dist
+out
+target
+*.class
+
+# 日志
+*.log
+logs
+
+# 特定文件类型不格式化
+*.min.js
+*.min.css
+*.bundle.js
+
+# Git
+.git
+.github
+
+# IDE
+.vscode
+.idea
+
+# 其他
+coverage
+.DS_Store
