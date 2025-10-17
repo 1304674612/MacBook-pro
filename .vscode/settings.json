@@ -18,18 +18,7 @@
     "--pch-storage=memory"
   ],
   
-  // Code Runner 配置 - 解决中文乱码问题
-  "code-runner.executorMap": {
-    "c": "cd $dir && clang -std=c17 -Wall -Wextra -O2 -fexec-charset=UTF-8 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "cpp": "cd $dir && clang++ -std=c++20 -Wall -Wextra -O2 -fexec-charset=UTF-8 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "java": "cd $dir && javac -encoding UTF-8 $fileName && java $fileNameWithoutExt",
-    "python": "cd $dir && /usr/local/bin/python3 -u $fileName"
-  },
-  "code-runner.runInTerminal": true,
-  "code-runner.saveFileBeforeRun": true,
-  "code-runner.preserveFocus": false,
-  "code-runner.clearPreviousOutput": false,
-  "code-runner.respectShebang": true,
+  // 已禁用 Code Runner 以减少多余工具干扰（使用内置运行或任务）
   
   // 终端编码设置
   "terminal.integrated.env.osx": {
@@ -37,43 +26,11 @@
     "LANG": "zh_CN.UTF-8"
   },
   
-  // Prettier 格式化配置
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": false,
-  "prettier.requireConfig": false,
-  "prettier.useEditorConfig": false,
+  // 简化格式化：仅使用语言服务器默认格式化，不强制 Prettier
+  "editor.formatOnSave": false,
   
-  // 针对不同文件类型的格式化设置
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "cSpell.enabled": false
-  },
+  // 禁用 markdown 拼写检查（保持 cSpell 在 settings 中不作用于 md）
+  "[markdown]": { "cSpell.enabled": false },
   
   "java.compile.nullAnalysis.mode": "automatic",
   "java.configuration.updateBuildConfiguration": "interactive",
