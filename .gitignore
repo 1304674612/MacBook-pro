@@ -1,4 +1,13 @@
-## macOS
+node_modules/
+practice/
+.DS_Store
+*.log
+__pycache__/
+.vscode/*.code-workspace
+*.iml
+target/
+dist/
+build/## macOS
 .DS_Store
 
 ## VSCode (keep config JSON but ignore temp)

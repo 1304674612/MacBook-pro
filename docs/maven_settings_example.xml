@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
+  <!-- 本地仓库(可改为SSD路径提升IO性能) -->
+  <localRepository>/Users/kiko/.m2/repository</localRepository>
+
+  <mirrors>
+    <mirror>
+      <id>aliyun</id>
+      <mirrorOf>central</mirrorOf>
+      <name>Aliyun Maven</name>
+      <url>https://maven.aliyun.com/repository/public</url>
+    </mirror>
+    <!-- 可选备用镜像,使用时建议只保留一个避免冲突 -->
+    <!--
+    <mirror>
+      <id>huaweicloud</id>
+      <mirrorOf>central</mirrorOf>
+      <name>Huawei Cloud Maven</name>
+      <url>https://repo.huaweicloud.com/repository/maven/</url>
+    </mirror>
+    -->
+  </mirrors>
+
+  <!-- 需要代理时启用(示例使用本地通用代理端口) -->
+  <!--
+  <proxies>
+    <proxy>
+      <id>local-proxy</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>127.0.0.1</host>
+      <port>7890</port>
+      <nonProxyHosts>localhost|127.0.0.1</nonProxyHosts>
+    </proxy>
+  </proxies>
+  -->
+
+  <profiles>
+    <profile>
+      <id>utf8</id>
+      <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+      </properties>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>utf8</activeProfile>
+  </activeProfiles>
+</settings>
