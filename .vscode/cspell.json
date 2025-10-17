@@ -18,6 +18,7 @@
     "^[0-9]+\\.\\s.*"
   ],
   "words": [
-    "Miniconda","condarc","py312","classpath","Aliyun","Tsinghua","Jupyter","matplotlib","numpy","pandas","xgboost","clangd","corretto","Conda","venv"
+    "Miniconda","condarc","py312","classpath","Aliyun","Tsinghua","Jupyter","matplotlib","numpy","pandas","xgboost","clangd","corretto","Conda","venv",
+    "pycache","Pipfile","elif","cpptools","iwyu","Wextra","fexec","javac","esbenp","scikit","spellright","Pylance"
   ]
 }
