@@ -1,7 +1,8 @@
 {
   "version": "0.2",
   "language": "en",
-  "enableFiletypes": ["markdown","plaintext"],
+  // 移除明确启用 markdown，避免覆盖 VSCode settings 中对 markdown 禁用
+  // "enableFiletypes": ["markdown","plaintext"],
   "ignorePaths": [
     "**/node_modules/**",
     "**/dist/**",
@@ -11,11 +12,13 @@
     "py312-base.yaml"
   ],
   "ignoreRegExpList": [
-    "/https?:\\/\\/[^\\s]+/",
-    "`[^`]+`",
-    "```[\\s\\S]*?```",
-    "[\\u4e00-\\u9fa5]+",
-    "^[0-9]+\\.\\s.*"
+    "/https?:\\/\\/[^\\s]+/",              // URL
+    "`[^`]+`",                                 // 行内代码
+    "```[a-zA-Z0-9_+-]*[\\s\\S]*?```",      // 三反引号代码块（含语言标记）
+    "````[a-zA-Z0-9_+-]*[\\s\\S]*?````",    // 四反引号围栏（文档中使用）
+    "<!--[\\s\\S]*?-->",                    // HTML 注释（含 cspell:disable）
+    "[\\u4e00-\\u9fa5]+",                   // 中文字符块
+    "^[0-9]+\\.\\s.*"                      // 有序列表行首
   ],
   "words": [
     "Miniconda","condarc","py312","classpath","Aliyun","Tsinghua","Jupyter","matplotlib","numpy","pandas","xgboost","clangd","corretto","Conda","venv",

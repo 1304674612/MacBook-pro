@@ -71,7 +71,8 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "cSpell.enabled": false
   },
   
   "java.compile.nullAnalysis.mode": "automatic",
@@ -123,4 +124,5 @@
   ,
   // 禁用 Spell Right 扩展以避免对中文文本的误报
   "spellright.enabled": false
+    ,
 }
