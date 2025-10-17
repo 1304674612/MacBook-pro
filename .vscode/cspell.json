@@ -1,0 +1,24 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "enableFiletypes": ["markdown","plaintext"],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/.git/**",
+    "**/.venv/**",
+    "target/**",
+    "py312-base.yaml"
+  ],
+  "ignoreRegExpList": [
+    "/https?:\\/\\/[^\\s]+/",
+    "`[^`]+`",
+    "```[\\s\\S]*?```",
+    "[\\u4e00-\\u9fa5]+",
+    "^[0-9]+\\.\\s.*"
+  ],
+  "words": [
+    "Miniconda","condarc","py312","classpath","Aliyun","Tsinghua","Jupyter","matplotlib","numpy","pandas","xgboost","clangd","corretto","Conda","venv",
+    "pycache","Pipfile","elif","cpptools","iwyu","Wextra","fexec","javac","esbenp","scikit","spellright","Pylance"
+  ]
+}

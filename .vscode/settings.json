@@ -35,5 +35,92 @@
   "terminal.integrated.env.osx": {
     "LC_ALL": "zh_CN.UTF-8",
     "LANG": "zh_CN.UTF-8"
+  },
+  
+  // Prettier 格式化配置
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "prettier.requireConfig": false,
+  "prettier.useEditorConfig": false,
+  
+  // 针对不同文件类型的格式化设置
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "markdown.validate.enabled": true,
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
   }
+  ,
+  // cSpell 拼写检查配置
+  "cSpell.language": "en",
+  "cSpell.enabled": true,
+  "cSpell.allowCompoundWords": true,
+  "cSpell.ignorePaths": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.git/**",
+    "**/.venv/**",
+    "python_project/.venv/**",
+    "py312-base.yaml",
+    "target/**",
+    "**/*.lock",
+    "**/package-lock.json"
+  ],
+  "cSpell.words": [
+    "Miniconda",
+    "condarc",
+    "clangd",
+    "xgboost",
+    "scikit",
+    "corretto",
+    "brewfile"
+  ],
+  "cSpell.ignoreRegExpList": [
+    "/https?:\\/\\/[^\\s]+/",
+    "`[^`]+`",
+    "```[\\s\\S]*?```",
+    "[\\u4e00-\\u9fa5]+",
+    "^[0-9]+\\.\\s.*"
+  ],
+  "cSpell.languageSettings": [],
+  "cSpell.configFile": ".vscode/cspell.json"
+  ,
+  "cSpell.diagnosticLevel": "Hint"
+  ,
+  // 禁用 Spell Right 扩展以避免对中文文本的误报
+  "spellright.enabled": false
 }

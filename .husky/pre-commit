@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# Pre-commit hook: 英文拼写检查 (仅检查 staged 文件)
+set -e
+
+# 选择 cspell 执行命令: 优先全局, 其次本地 node_modules, 最后 npx --no-install
+CSPELL_CMD=""
+if command -v cspell &> /dev/null; then
+  CSPELL_CMD="cspell"
+elif [ -f "./node_modules/.bin/cspell" ]; then
+  CSPELL_CMD="./node_modules/.bin/cspell"
+elif command -v npx &> /dev/null; then
+  CSPELL_CMD="npx --no-install cspell"
+else
+  echo "⚠️  cspell not found (global/local). Install: npm install (project) 或 npm install -g cspell"
+  echo "Skipping spell check..."
+  exit 0
+fi
+
+# 获取 staged 文件 (仅文本类文件)
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(md|txt|java|c|cpp|h|py|js|ts|json|yaml|yml|sh)$' || true)
+
+if [ -z "$STAGED_FILES" ]; then
+  echo "✅ No text files to spell-check"
+  exit 0
+fi
+
+echo "🔍 Running spell check (using: $CSPELL_CMD) ..."
+echo "$STAGED_FILES" | xargs $CSPELL_CMD --no-progress --no-must-find-files
+RESULT=$?
+
+if [ $RESULT -ne 0 ]; then
+  echo ""
+  echo "❌ Spell check failed. Fix errors 或添加单词到 .vscode/cspell.json / .vscode/cspell.json"
+  echo "   跳过本次: git commit --no-verify"
+  exit 1
+fi
+
+echo "✅ Spell check passed"
+exit 0
